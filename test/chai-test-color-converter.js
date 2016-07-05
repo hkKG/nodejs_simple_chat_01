@@ -1,7 +1,5 @@
 /**
- *
  *  !!! used as template !!!
- *
  *
  * BDD: Behavior Driven Development
  *
@@ -16,6 +14,7 @@
  * https://semaphoreci.com/community/tutorials/getting-started-with-node-js-and-mocha
  *
  * https://chaijs.com
+ * expect(1 + 1).to.equal(2);
  */
 
 var expect = require("chai").expect;
@@ -46,4 +45,3 @@ describe("### chai-test-color-converter.js ###", function () {
         });
     });
 });
-//expect(1 + 1).to.equal(2);

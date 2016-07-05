@@ -1,5 +1,5 @@
 /*
-ToDo 16.06.2016:
+ ToDo 16.06.2016:
 
  app.get('/', require('./frontpage').get); ==> http://localhost:3000/ ==> +++
 
@@ -43,10 +43,9 @@ var chai = require("chai"),
     expect = chai.expect, // BDD
     should = chai.should(); // BDD
 
-describe("### test-chat-01-routes.js ==> http://localhost:3000  ###", function () {
+describe("### test-chat-01-routes.js ==> app.get('/', require('./frontpage').get)  ###", function () {
     it("returns status 200 for /", function (done) {
         request
-        // .get('http://localhost:3000')
             .get('http://127.0.0.1:3000')
             .end(function (err, res) {
                 // we expect error to not exist
@@ -65,11 +64,10 @@ describe("### test-chat-01-routes.js ==> http://localhost:3000  ###", function (
 });
 
 
-describe("### test-chat-01-routes.js ==> http://localhost:3000  ###", function () {
-    it("returns status 200 for /login", function (done) {
+describe("### test-chat-01-routes.js ==> app.get('/login', require('./login').get)  ###", function () {
+    it("returns status 200 for  /login", function (done) {
         request
-        // .get('http://localhost:3000')
-            .get('http://127.0.0.1:3000')
+            .get('http://127.0.0.1:3000/login')
             .end(function (err, res) {
                 // we expect error to not exist
                 should.not.exist(err);
